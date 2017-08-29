@@ -1,10 +1,7 @@
-// create the default state of the store
-const defaultState = {
-  lang:'en-us'
-};
+import {appDefaults} from '../static/constants';
 
 // create the reducers that will control the store
-const defaultsReducer = (state = defaultState, action) => {
+const defaultsReducer = (state = appDefaults, action) => {
   switch (action.type) {
     // remember not to mutate the state
     case 'DEFAULTS_CHANGE_LANGUAGE':
