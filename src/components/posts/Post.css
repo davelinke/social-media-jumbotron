@@ -1,6 +1,40 @@
+.post{
+    background-color: #fff;
+    position: absolute;
+    top:0;
+    left:0;
+    color:#000;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1s ease;
+}
+.post.active{
+    opacity:1;
+}
+.post:nth-child(even){
+    background-color: #000;
+    color: #fff;
+}
 .image{
-    width:200px;
-    height:200px;
+    position: absolute;
+    top:0;
+    left:0;
+    width:50%;
+    height:100%;
     background-size: cover;
     background-position: center center;
+}
+.message{
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top:0;
+}
+.post:nth-child(even) .image{
+    left:auto;
+    right:0;
+}
+.post:nth-child(even) .message{
+    right:auto;
+    left:0;
 }

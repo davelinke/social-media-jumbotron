@@ -16,7 +16,8 @@ h1.intro{
     padding:0;
     margin:0;
     opacity:1;
-    transition: opacity 2s ease-in;
+    transition: opacity 2s ease-in 1s;
+    z-index: 1000;
 }
 .run h1.intro{
     opacity:0;
