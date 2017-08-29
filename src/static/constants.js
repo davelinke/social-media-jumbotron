@@ -1,8 +1,21 @@
 export const appDefaults = {
     lang:'en-us',
     dataService:'tint'
-}
+};
 
+// default value for social feed
+
+export const socialDataDefaults = {
+    posts:[]
+};
+
+// default values for UI components
+export const uiDefaults = {
+    appClassName:'loading',
+    showHeadingText:false
+};
+
+// constants and methods for data services (just TINT for now)
 export const feed = {
     dataService:'tint',
     dataServices:{
@@ -32,5 +45,3 @@ export const feed = {
         }
     }
 };
-
-export const socialDataDefaults = {posts:[]};
