@@ -13,7 +13,7 @@ export const socialDataDefaults = {
 export const uiDefaults = {
     appClassName:'loading',
     showHeadingText:false,
-    intervalLength:4000
+    intervalLength:8000
 };
 
 // constants and methods for data services (just TINT for now)
