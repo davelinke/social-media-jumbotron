@@ -12,8 +12,11 @@ class Post extends Component {
         return (
             <div className={"post full-screen "+(this.props.post.active?'active':'')}>
                 <div className="image" style={imageStyle}></div>
-                <div className={'message '+this.props.post.service}>
-                    <div className="author">{this.props.post.author}</div>
+                <div className="message">
+                    <div className="author">
+                        <div className={'icon '+this.props.post.service} title={this.props.post.service}></div>
+                        <div className="author-name">{this.props.post.author}</div>
+                    </div>
                     <div className="text">{this.props.post.title}</div>
                 </div>
             </div>
