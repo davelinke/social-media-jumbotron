@@ -23,6 +23,11 @@ export const getData = function() {
                         type: 'SOCIAL_DATA_SET',
                         value: parsedData
                     });
+                    // exit loading screen
+                    store.dispatch({
+                        type:'UI_SET',
+                        value:{appClassName:'run'}
+                    });
                 })
                 .catch((ex)=>{
                     // if there's an error, implement error handling here
