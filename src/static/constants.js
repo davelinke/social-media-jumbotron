@@ -12,7 +12,8 @@ export const socialDataDefaults = {
 // default values for UI components
 export const uiDefaults = {
     appClassName:'loading',
-    showHeadingText:false
+    showHeadingText:false,
+    intervalLength:4000
 };
 
 // constants and methods for data services (just TINT for now)
@@ -34,6 +35,7 @@ export const feed = {
                     let post = json.data[i];
                     let authorObject = JSON.parse(post.author);
                     returnArray.push({
+                        active:(i==0),
                         image:post.image,
                         title:post.title,
                         author:authorObject.name,
