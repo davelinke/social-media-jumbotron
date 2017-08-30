@@ -11,6 +11,7 @@ The project was built around the idea of the halftime period in a soccer match. 
 ## To Do.
 
 - Implement Lazy Loading for images.
+- Make the app work in portrait mode (just in case) or announce to user to switch to landscape mode to use.
 - Add variety to the animations.
 - Detach the CSS form the react components and pass as configuration.
 - Generating config from a client dashboard? (not a front end exercise solely).
