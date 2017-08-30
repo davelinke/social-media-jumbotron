@@ -4,7 +4,42 @@ It is architected around the [TINT](https://www.tintup.com/) Social Media Aggreg
 
 The project base is [Create React App](https://github.com/facebookincubator/create-react-app).
 
-## Table of Contents
+## Use cases.
+
+The project was built around the idea of the halftime period in a soccer match. Just as the other sports, whenever there is dead time, the screens that are present in a contemporary stadium either show ads or information associated to the home team. Tho this end, the idea is to set up a hashtag in whatever social network you might like (hashtag permitting) let the audience send messages using it, and then curate and show these messages in jumbotron mode on the stadium screens. Definitely not a new idea, I am pretty sure this exists, but a nice idea to develop as a short exercise with the TINT API.
+
+## To Do.
+
+- Add variety to the animations
+- Detach the CSS form the react components and pass as configuration.
+- Generating config from a client dashboard? (not a front end exercise solely).
+
+## Prerequisites
+
+You need [Node.js & NPM](https://nodejs.org)
+
+## Set up local environment
+
+- Clone this repo.
+- cd repo folder
+- npm install
+- npm start
+
+## Hosted at Firebase
+
+The project has some Firebase specific files that indicate where to deploy (.firebaserc) and how to deploy (firebasse.json).
+If you know what you are doing then edit those. You can always just transfer the contents of the build directory to the server of your preference to have a production instance. Check how to do a production build [here](#npm-run-build).
+
+In order to deploy to Firebase Hosting follow these steps in the node console:
+
+`npm install -g firebase-tools`
+`firebase init`
+`firebase deploy`
+
+Check the [Firebase Hosting documentation](https://firebase.google.com/docs/hosting/) to learn more about it
+
+
+## Create React App commands
 
 - [Available Scripts](#available-scripts)
   - [npm start](#npm-start)
