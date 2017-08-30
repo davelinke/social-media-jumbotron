@@ -10,7 +10,8 @@ The project was built around the idea of the halftime period in a soccer match. 
 
 ## To Do.
 
-- Add variety to the animations
+- Implement Lazy Loading for images.
+- Add variety to the animations.
 - Detach the CSS form the react components and pass as configuration.
 - Generating config from a client dashboard? (not a front end exercise solely).
 
