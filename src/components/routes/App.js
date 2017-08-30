@@ -16,7 +16,7 @@ class App extends Component {
     }
     componentDidMount(){
         // let's rotate them posts
-        var intervalId = setInterval(this.timer, this.props.ui.intervalLength);
+        let intervalId = setInterval(this.timer, this.props.ui.intervalLength);
         // despite the use of redux to control state, this is an instance where the calue won't be used anywhere else,
         // so we use component state
         this.setState({intervalId: intervalId});
@@ -33,7 +33,7 @@ class App extends Component {
     }
     renderPosts(posts){
         return posts.map((post,i)=>{
-            return (<Post key={i} post={post} />);
+            return (<Post key={i} post={post} messageLength={this.props.ui.maxMessageLength} />);
         });
     }
     render() {
