@@ -41,7 +41,7 @@ export const feed = {
                     let authorObject = JSON.parse(post.author);
                     returnArray.push({
                         state:(i===0?'active':''),
-                        image:post.image,
+                        image:post.original_image,
                         title:post.title,
                         author:authorObject.name,
                         service:post.social_id.split('_')[0]
