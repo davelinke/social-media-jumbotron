@@ -2,7 +2,7 @@ import store from '../../store';
 import fetchJsonp from 'fetch-jsonp';
 import {feed} from '../../static/constants';
 
-export const getData = function() {
+export const getData = function(backup=false) {
     // get the endopoint URL
     let servConsts = feed.dataServices[feed.dataService];
 
@@ -10,7 +10,7 @@ export const getData = function() {
     switch (servConsts.dataType) {
         // lets default to jsonp which is the one we are going to use in the exercise
         default:
-            let feedUrl = servConsts.getFeedUrl();
+            let feedUrl = servConsts.getFeedUrl(backup);
             fetchJsonp(feedUrl, {
                 jsonpCallbackFunction: 'callback',
               })
@@ -34,6 +34,8 @@ export const getData = function() {
                 .catch((ex)=>{
                     // if there's an error, implement error handling here
                     console.log(ex);
+                    // go for the backup feed
+                    getData(true);
                 });
         ;
     }

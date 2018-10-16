@@ -28,10 +28,11 @@ export const feed = {
             feedPath:'feed', // the path for the posts feed
             feedName:'juventusfc', // the name of the posts feed
             backupFeedURL:'./mockup-json-data.js',
-            getFeedUrl:function(){ // how to compose the complete feed url
+            getFeedUrl:function(backup=false){ // how to compose the complete feed url
                 let feedUrl = this.backupFeedURL;
-                // if you have a tint api then uncomment the following line
-                // feedUrl = this.baseUrl + '/' + this.feedPath + '/' + this.feedName + '?api_token=' + this.apiToken;
+                if (!backup){
+                    feedUrl = this.baseUrl + '/' + this.feedPath + '/' + this.feedName + '?api_token=' + this.apiToken;
+                }
                 return feedUrl;
             },
             parseFeed:function(json){ // how should the output of the feed be parsed to return the poper cycling structure
@@ -41,7 +42,7 @@ export const feed = {
                     let authorObject = JSON.parse(post.author);
                     returnArray.push({
                         state:(i===0?'active':''),
-                        image:post.original_image,
+                        image:post.image,
                         title:post.title,
                         author:authorObject.name,
                         service:post.social_id.split('_')[0]
