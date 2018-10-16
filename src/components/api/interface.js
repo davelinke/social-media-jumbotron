@@ -11,7 +11,9 @@ export const getData = function() {
         // lets default to jsonp which is the one we are going to use in the exercise
         default:
             let feedUrl = servConsts.getFeedUrl();
-            fetchJsonp(feedUrl)
+            fetchJsonp(feedUrl, {
+                jsonpCallbackFunction: 'callback',
+              })
                 .then((response) => {
                     return response.json();
                 })

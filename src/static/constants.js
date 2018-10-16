@@ -27,8 +27,12 @@ export const feed = {
             apiToken:'97727f79a88d1c992b1f17e6e709520293e671ae', // the api token for the feed
             feedPath:'feed', // the path for the posts feed
             feedName:'juventusfc', // the name of the posts feed
+            backupFeedURL:'./mockup-json-data.js',
             getFeedUrl:function(){ // how to compose the complete feed url
-                return this.baseUrl + '/' + this.feedPath + '/' + this.feedName + '?api_token=' + this.apiToken;
+                let feedUrl = this.backupFeedURL;
+                // if you have a tint api then uncomment the following line
+                // feedUrl = this.baseUrl + '/' + this.feedPath + '/' + this.feedName + '?api_token=' + this.apiToken;
+                return feedUrl;
             },
             parseFeed:function(json){ // how should the output of the feed be parsed to return the poper cycling structure
                 let returnArray = [];
